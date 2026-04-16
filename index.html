@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Trust Center — Alethinx AI</title>
+  <meta name="description" content="Alethinx AI's security posture, data privacy, infrastructure transparency, and compliance commitments."/>
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta property="og:title" content="Trust Center — Alethinx AI">
+  <meta property="og:url" content="https://trust.alethinx.ai">
+  <meta property="og:site_name" content="Alethinx AI">
+  <link rel="canonical" href="https://trust.alethinx.ai/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23902DCE'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter,sans-serif' font-weight='900' font-size='18' fill='white'>A</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --brand:#902DCE; --brand-light:#A855E8; --brand-dim:rgba(144,45,206,.1);
+      --bg-dark:#2a0d5c; --bg-mid:#3a1672; --bg-surface:#EEE8FF; --bg-card:#F8F5FF;
+      --text-pri:#1a0a3d; --text-sec:#5a4a7a; --text-muted:#8f80a8;
+      --border:rgba(144,45,206,.14); --border-dark:rgba(255,255,255,.08);
+      --green:#16a34a; --green-bg:#dcfce7;
+      --yellow:#ca8a04; --yellow-bg:#fef9c3;
+      --blue:#1d4ed8; --blue-bg:#dbeafe;
+      --radius:12px;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;background:var(--bg-surface);color:var(--text-pri);min-height:100vh;display:flex;flex-direction:column;}
+
+    /* ═══════════════════════════════════════
+       TRUST SUITE SHARED TOP NAV
+    ═══════════════════════════════════════ */
+    .trust-nav{background:var(--bg-dark);border-bottom:1px solid rgba(255,255,255,.06);position:sticky;top:0;z-index:200;}
+    .trust-nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:52px;gap:20px;}
+    .trust-suite-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:'DM Mono',monospace;white-space:nowrap;flex-shrink:0;}
+    .trust-suite-label span{color:var(--brand-light);}
+    .trust-tabs{display:flex;gap:4px;flex:1;justify-content:center;}
+    .trust-tab{display:flex;align-items:center;gap:8px;padding:7px 16px;border-radius:8px;font-size:13px;font-weight:600;color:rgba(255,255,255,.5);text-decoration:none;cursor:pointer;transition:background .18s,color .18s;border:1px solid transparent;}
+    .trust-tab:hover{background:rgba(255,255,255,.06);color:rgba(255,255,255,.85);}
+    .trust-tab.active{background:rgba(144,45,206,.22);border-color:rgba(144,45,206,.4);color:#fff;}
+    .trust-tab-icon{font-size:14px;line-height:1;}
+    .trust-tab-badge{font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;background:var(--green);color:#fff;padding:2px 6px;border-radius:4px;font-family:'DM Mono',monospace;}
+    .trust-back{font-size:12px;color:rgba(255,255,255,.4);text-decoration:none;font-family:'DM Mono',monospace;flex-shrink:0;transition:color .18s;}
+    .trust-back:hover{color:rgba(255,255,255,.8);}
+
+    /* ═══════════════════════════════════════
+       HEADER
+    ═══════════════════════════════════════ */
+    .header{background:var(--bg-dark);position:relative;overflow:hidden;}
+    .header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 50% 0%,rgba(144,45,206,.5) 0%,transparent 65%);pointer-events:none;}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:64px;position:relative;border-bottom:1px solid var(--border-dark);}
+    .logo-area{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .logo-mark{width:34px;height:34px;background:var(--brand);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:17px;color:#fff;}
+    .logo-text{font-weight:800;font-size:16px;color:#fff;}
+    .logo-text span{color:var(--brand-light);}
+    .logo-sep{width:1px;height:20px;background:var(--border-dark);margin:0 2px;}
+    .logo-page{font-size:13px;font-weight:600;color:rgba(255,255,255,.45);font-family:'DM Mono',monospace;}
+    .header-contact{display:flex;align-items:center;gap:10px;}
+    .btn-contact{background:none;color:rgba(255,255,255,.65);border:1px solid rgba(255,255,255,.2);padding:7px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .18s;text-decoration:none;}
+    .btn-contact:hover{border-color:var(--brand-light);color:#fff;}
+
+    .hero{max-width:1100px;margin:0 auto;padding:48px 32px 40px;position:relative;display:flex;align-items:flex-end;justify-content:space-between;gap:32px;}
+    .hero-left{}
+    .eyebrow{font-size:11px;font-weight:700;color:rgba(255,255,255,.38);letter-spacing:1.8px;text-transform:uppercase;margin-bottom:10px;font-family:'DM Mono',monospace;}
+    .hero-title{font-size:32px;font-weight:900;color:#fff;line-height:1.1;margin-bottom:12px;letter-spacing:-.5px;}
+    .hero-title span{color:var(--brand-light);}
+    .hero-sub{font-size:15px;color:rgba(255,255,255,.55);line-height:1.6;max-width:520px;}
+    .hero-stats{display:flex;gap:24px;flex-shrink:0;}
+    .hero-stat{text-align:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:16px 24px;}
+    .hero-stat-val{font-size:22px;font-weight:900;color:#fff;}
+    .hero-stat-lbl{font-size:11px;color:rgba(255,255,255,.45);font-family:'DM Mono',monospace;margin-top:3px;}
+
+    /* SECTION ANCHOR NAV */
+    .anchor-nav{background:var(--bg-mid);border-bottom:1px solid var(--border-dark);}
+    .anchor-nav-inner{max-width:1100px;margin:0 auto;padding:0 32px;display:flex;gap:0;overflow-x:auto;}
+    .anchor-link{padding:12px 18px;font-size:13px;font-weight:600;color:rgba(255,255,255,.5);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .18s,border-color .18s;flex-shrink:0;}
+    .anchor-link:hover{color:#fff;border-bottom-color:rgba(144,45,206,.5);}
+
+    /* ═══════════════════════════════════════
+       CONTENT
+    ═══════════════════════════════════════ */
+    .container{max-width:1100px;margin:0 auto;padding:48px 32px 80px;flex:1;}
+
+    /* TWO COL LAYOUT */
+    .two-col{display:grid;grid-template-columns:2fr 1fr;gap:28px;align-items:start;}
+    @media(max-width:860px){.two-col{grid-template-columns:1fr;}}
+
+    /* SECTION */
+    .trust-section{margin-bottom:56px;}
+    .sec-hd{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:14px;border-bottom:2px solid var(--border);}
+    .sec-icon{width:38px;height:38px;background:var(--brand-dim);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;border:1px solid var(--border);}
+    .sec-title{font-size:19px;font-weight:800;color:var(--text-pri);}
+    .sec-sub{font-size:13px;color:var(--text-muted);margin-top:1px;}
+
+    /* CARD GRID */
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;}
+    .trust-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:0 2px 12px rgba(144,45,206,.04);transition:box-shadow .18s,border-color .18s;}
+    .trust-card:hover{box-shadow:0 4px 24px rgba(144,45,206,.1);border-color:rgba(144,45,206,.3);}
+    .card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+    .card-icon{font-size:20px;}
+    .card-badge{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;padding:3px 8px;border-radius:4px;}
+    .badge-active{background:var(--green-bg);color:var(--green);}
+    .badge-progress{background:var(--yellow-bg);color:var(--yellow);}
+    .badge-planned{background:#f3f4f6;color:#6b7280;}
+    .badge-partner{background:var(--blue-bg);color:var(--blue);}
+    .card-title{font-size:14px;font-weight:700;color:var(--text-pri);margin-bottom:6px;}
+    .card-desc{font-size:13px;color:var(--text-sec);line-height:1.6;}
+
+    /* INFRA TABLE */
+    .infra-table{background:#fff;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 12px rgba(144,45,206,.04);}
+    .infra-row{display:flex;align-items:center;gap:16px;padding:14px 20px;border-bottom:1px solid rgba(144,45,206,.07);}
+    .infra-row:last-child{border-bottom:none;}
+    .infra-row:hover{background:#faf8ff;}
+    .infra-logo{width:36px;height:36px;background:var(--brand-dim);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;border:1px solid var(--border);}
+    .infra-info{flex:1;}
+    .infra-name{font-size:14px;font-weight:700;color:var(--text-pri);}
+    .infra-role{font-size:12px;color:var(--text-muted);font-family:'DM Mono',monospace;margin-top:1px;}
+    .infra-region{font-family:'DM Mono',monospace;font-size:11px;color:var(--text-muted);text-align:right;flex-shrink:0;}
+    .infra-cert{display:flex;gap:6px;flex-shrink:0;}
+    .infra-cert-badge{font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px;background:var(--blue-bg);color:var(--blue);}
+
+    /* PROSE BLOCKS */
+    .prose-block{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:24px;box-shadow:0 2px 12px rgba(144,45,206,.04);}
+    .prose-block p{font-size:14px;color:var(--text-sec);line-height:1.8;margin-bottom:14px;}
+    .prose-block p:last-child{margin-bottom:0;}
+    .prose-block ul{padding-left:20px;margin-top:8px;}
+    .prose-block ul li{font-size:14px;color:var(--text-sec);line-height:1.7;margin-bottom:4px;}
+
+    /* SLA TABLE */
+    .sla-table{background:#fff;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 12px rgba(144,45,206,.04);}
+    .sla-head{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;padding:12px 20px;background:var(--bg-dark);gap:16px;}
+    .sla-head-cell{font-size:11px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:1.2px;font-family:'DM Mono',monospace;}
+    .sla-row{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;padding:14px 20px;border-bottom:1px solid rgba(144,45,206,.07);gap:16px;align-items:center;}
+    .sla-row:last-child{border-bottom:none;}
+    .sla-row:hover{background:#faf8ff;}
+    .sla-service{font-size:14px;font-weight:600;color:var(--text-pri);}
+    .sla-target{font-family:'DM Mono',monospace;font-size:13px;font-weight:600;color:var(--green);}
+    .sla-actual{font-family:'DM Mono',monospace;font-size:13px;font-weight:600;color:var(--brand);}
+    .sla-credit{font-size:12px;color:var(--text-sec);}
+
+    /* STATUS BANNER (linked) */
+    .status-link-card{
+      background:linear-gradient(135deg,var(--bg-dark) 0%,var(--bg-mid) 100%);
+      border:1px solid rgba(144,45,206,.3);
+      border-radius:var(--radius);padding:22px 26px;
+      display:flex;align-items:center;justify-content:space-between;gap:20px;
+    }
+    .slc-left{display:flex;align-items:center;gap:14px;}
+    .slc-pulse{width:10px;height:10px;border-radius:50%;background:#22c55e;animation:pg 2s infinite;flex-shrink:0;}
+    @keyframes pg{0%{box-shadow:0 0 0 0 rgba(34,197,94,.7);}70%{box-shadow:0 0 0 8px rgba(34,197,94,0);}100%{box-shadow:0 0 0 0 rgba(34,197,94,0);}}
+    .slc-text h4{font-size:15px;font-weight:700;color:#fff;margin-bottom:3px;}
+    .slc-text p{font-size:13px;color:rgba(255,255,255,.5);}
+    .slc-link{background:var(--brand);color:#fff;text-decoration:none;padding:9px 20px;border-radius:8px;font-size:13px;font-weight:700;white-space:nowrap;transition:background .18s;flex-shrink:0;}
+    .slc-link:hover{background:var(--brand-light);}
+
+    /* CONTACT BLOCK */
+    .contact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;}
+    .contact-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center;box-shadow:0 2px 12px rgba(144,45,206,.04);}
+    .contact-card-icon{font-size:28px;margin-bottom:10px;}
+    .contact-card h4{font-size:14px;font-weight:700;color:var(--text-pri);margin-bottom:4px;}
+    .contact-card p{font-size:12px;color:var(--text-muted);margin-bottom:12px;line-height:1.5;}
+    .contact-card a{font-size:13px;font-weight:600;color:var(--brand);text-decoration:none;font-family:'DM Mono',monospace;}
+    .contact-card a:hover{color:var(--brand-light);}
+
+    /* DISCLOSURE FORM */
+    .disclosure-form{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:0 2px 12px rgba(144,45,206,.04);}
+    .disclosure-form h3{font-size:16px;font-weight:800;color:var(--text-pri);margin-bottom:6px;}
+    .disclosure-form p{font-size:13px;color:var(--text-sec);margin-bottom:20px;line-height:1.6;}
+    .form-row{margin-bottom:14px;}
+    .form-label{display:block;font-size:11px;font-weight:700;color:var(--text-sec);margin-bottom:5px;text-transform:uppercase;letter-spacing:.7px;}
+    .form-input,.form-textarea{width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;font-family:inherit;color:var(--text-pri);outline:none;transition:border-color .18s;}
+    .form-input:focus,.form-textarea:focus{border-color:var(--brand);}
+    .form-textarea{min-height:100px;resize:vertical;}
+    .btn-submit{background:var(--brand);color:#fff;border:none;padding:11px 24px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .18s;}
+    .btn-submit:hover{background:var(--brand-light);}
+
+    /* SIDEBAR */
+    .sidebar{display:flex;flex-direction:column;gap:16px;}
+    .sidebar-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:0 2px 12px rgba(144,45,206,.04);}
+    .sidebar-card h4{font-size:13px;font-weight:800;color:var(--text-pri);margin-bottom:12px;text-transform:uppercase;letter-spacing:.8px;}
+    .sidebar-item{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(144,45,206,.07);font-size:13px;}
+    .sidebar-item:last-child{border-bottom:none;}
+    .sidebar-item-lbl{color:var(--text-sec);}
+    .sidebar-item-val{font-weight:700;color:var(--text-pri);font-family:'DM Mono',monospace;font-size:12px;}
+    .sidebar-item-green{color:var(--green);}
+    .last-audit{font-size:11px;color:var(--text-muted);font-family:'DM Mono',monospace;margin-top:10px;}
+
+    /* FOOTER */
+    .footer{background:var(--bg-dark);border-top:1px solid var(--border-dark);padding:22px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+    .footer-copy{font-size:11px;color:rgba(255,255,255,.3);font-family:'DM Mono',monospace;}
+    .footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+    .footer-links a{font-size:11px;color:rgba(255,255,255,.4);text-decoration:none;font-family:'DM Mono',monospace;transition:color .18s;}
+    .footer-links a:hover{color:var(--brand-light);}
+
+    @media(max-width:700px){
+      .trust-nav-inner{padding:0 16px;}.trust-suite-label{display:none;}
+      .header-inner,.hero,.container{padding-left:16px;padding-right:16px;}
+      .hero{flex-direction:column;}.hero-stats{justify-content:center;}
+      .anchor-nav-inner{padding:0 8px;}
+      .sla-head,.sla-row{grid-template-columns:2fr 1fr 1fr;}
+      .sla-head .sla-head-cell:last-child,.sla-row .sla-credit{display:none;}
+      .footer{flex-direction:column;text-align:center;padding:20px;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════ TRUST SUITE NAV (SHARED) ═══════════════════ -->
+<nav class="trust-nav">
+  <div class="trust-nav-inner">
+    <div class="trust-suite-label">Alethinx <span>Trust Suite</span></div>
+    <div class="trust-tabs">
+      <a href="https://status.alethinx.ai" class="trust-tab">
+        <span class="trust-tab-icon">⚡</span>
+        System Status
+        <span class="trust-tab-badge">ALL OK</span>
+      </a>
+      <div class="trust-tab active">
+        <span class="trust-tab-icon">🔒</span>
+        Trust Center
+      </div>
+    </div>
+    <a href="https://alethinx.ai" class="trust-back">← alethinx.ai</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════ HEADER ═══════════════════ -->
+<div class="header">
+  <div class="header-inner">
+    <a href="https://alethinx.ai" class="logo-area">
+      <div class="logo-mark">A</div>
+      <div class="logo-text">Alethinx <span>AI</span></div>
+      <div class="logo-sep"></div>
+      <div class="logo-page">trust</div>
+    </a>
+    <div class="header-contact">
+      <a href="mailto:security@alethinx.ai" class="btn-contact">Report a Vulnerability</a>
+    </div>
+  </div>
+  <div class="hero">
+    <div class="hero-left">
+      <div class="eyebrow">Trust Center</div>
+      <div class="hero-title">Security &amp; Compliance<br><span>Built Into Every Layer</span></div>
+      <div class="hero-sub">Alethinx AI is built for private equity deal teams, ETA searchers, and M&amp;A professionals who demand enterprise-grade data security. Here's exactly how we protect your deals.</div>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-val">99.8%</div><div class="hero-stat-lbl">avg uptime</div></div>
+      <div class="hero-stat"><div class="hero-stat-val">AES-256</div><div class="hero-stat-lbl">encryption</div></div>
+      <div class="hero-stat"><div class="hero-stat-val">0</div><div class="hero-stat-lbl">data breaches</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION ANCHOR NAV -->
+<div class="anchor-nav">
+  <div class="anchor-nav-inner">
+    <a href="#security" class="anchor-link">Security</a>
+    <a href="#privacy" class="anchor-link">Data Privacy</a>
+    <a href="#infrastructure" class="anchor-link">Infrastructure</a>
+    <a href="#sla" class="anchor-link">SLA &amp; Uptime</a>
+    <a href="#compliance" class="anchor-link">Compliance</a>
+    <a href="#disclosure" class="anchor-link">Vulnerability Disclosure</a>
+  </div>
+</div>
+
+<!-- ═══════════════════ CONTENT ═══════════════════ -->
+<div class="container">
+
+  <div class="two-col">
+    <div>
+
+      <!-- ══ SECURITY ══ -->
+      <div class="trust-section" id="security">
+        <div class="sec-hd">
+          <div class="sec-icon">🔐</div>
+          <div><div class="sec-title">Security</div><div class="sec-sub">How we protect your deal data</div></div>
+        </div>
+        <div class="card-grid">
+          <div class="trust-card">
+            <div class="card-header"><span class="card-icon">🔒</span><span class="card-badge badge-active">Active</span></div>
+            <div class="card-title">Encryption at Rest</div>
+            <div class="card-desc">All deal data, user records, and AI-generated insights are encrypted at rest using AES-256 at rest across all data stores.</div>
+          </div>
+          <div class="trust-card">
+            <div class="card-header"><span class="card-icon">🛡️</span><span class="card-badge badge-active">Active</span></div>
+            <div class="card-title">Encryption in Transit</div>
+            <div class="card-desc">All data in transit is protected by TLS 1.3. HTTPS is enforced across all endpoints — no exceptions. Certificate management is fully automated.</div>
+          </div>
+          <div class="trust-card">
+            <div class="card-header"><span class="card-icon">👤</span><span class="card-badge badge-active">Active</span></div>
+            <div class="card-title">Row-Level Security</div>
+            <div class="card-desc">Row-level security is enforced on all database tables. Users can only access their own deal data — cross-tenant data access is architecturally prevented.</div>
+          </div>
+          <div class="trust-card">
+            <div class="card-header"><span class="card-icon">🔑</span><span class="card-badge badge-active">Active</span></div>
+            <div class="card-title">Authentication</div>
+            <div class="card-desc">Secure session management with cryptographically signed tokens. All sessions are scoped, signed, and expire automatically. No plaintext passwords are ever stored.</div>
+          </div>
+          <div class="trust-card">
+            <div class="card-header"><span class="card-icon">🤖</span><span class="card-badge badge-active">Active</span></div>
+            <div class="card-title">AI Prompt Security</div>
+            <div class="card-desc">All AI agent prompts are server-side only — never exposed to the client. Prompt injection protections are applied across all AI inference calls. User data is never used to train external AI models.</div>
+          </div>
+          <div class="trust-card">
+            <div class="card-header"><span class="card-icon">🔍</span><span class="card-badge badge-progress">In Progress</span></div>
+            <div class="card-title">Penetration Testing</div>
+            <div class="card-desc">First external penetration test is scheduled for Q3 2026 with a certified third-party security firm. Results will be summarized and published here.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ DATA PRIVACY ══ -->
+      <div class="trust-section" id="privacy">
+        <div class="sec-hd">
+          <div class="sec-icon">🕵️</div>
+          <div><div class="sec-title">Data Privacy</div><div class="sec-sub">What we collect, how we use it, and your rights</div></div>
+        </div>
+        <div class="prose-block">
+          <p>Alethinx AI is designed with data minimization as a core principle. We collect only what is required to deliver deal intelligence services to you.</p>
+          <p><strong>What we collect:</strong></p>
+          <ul>
+            <li>Account information (name, email, company)</li>
+            <li>Deal data you enter or import into the platform</li>
+            <li>Usage analytics (page views, feature interactions) — anonymized</li>
+            <li>Payment metadata via Stripe (we never see your full card number)</li>
+          </ul>
+          <p><strong>What we do not do:</strong></p>
+          <ul>
+            <li>We do not sell your data to third parties — ever</li>
+            <li>We do not use your deal data to train AI models</li>
+            <li>We do not allow advertisers to target you</li>
+            <li>We do not share your data with competitors or data brokers</li>
+          </ul>
+          <p><strong>Data residency:</strong> All data is stored and processed within the United States. EU users may request data residency options at <a href="mailto:privacy@alethinx.ai" style="color:var(--brand)">privacy@alethinx.ai</a>.</p>
+          <p><strong>Retention:</strong> Active account data is retained for the duration of your subscription plus 90 days. On account deletion, all personal data is purged within 30 days. Deal records may be exported before deletion.</p>
+          <p><strong>Your rights (CCPA / GDPR):</strong> You may request a full export, correction, or deletion of your data at any time by emailing <a href="mailto:privacy@alethinx.ai" style="color:var(--brand)">privacy@alethinx.ai</a>. We respond within 5 business days.</p>
+        </div>
+      </div>
+
+      <!-- ══ INFRASTRUCTURE ══ -->
+      <div class="trust-section" id="infrastructure">
+        <div class="sec-hd">
+          <div class="sec-icon">🏗️</div>
+          <div><div class="sec-title">Infrastructure</div><div class="sec-sub">Our vendor stack and their security certifications</div></div>
+        </div>
+        <div class="infra-table">
+          <div class="infra-row">
+            <div class="infra-logo">⚡</div>
+            <div class="infra-info"><div class="infra-name">Vercel</div><div class="infra-role">Frontend hosting, edge CDN, serverless functions</div></div>
+            <div class="infra-cert"><span class="infra-cert-badge">SOC 2</span></span><span class="infra-cert-badge">ISO 27001</span></div>
+            <div class="infra-region">United States / global CDN</div>
+          </div>
+          <div class="infra-row">
+            <div class="infra-logo">🐘</div>
+            <div class="infra-info"><div class="infra-name">Supabase</div><div class="infra-role">Managed database, authentication, and serverless infrastructure</div></div>
+            <div class="infra-cert"><span class="infra-cert-badge">SOC 2 Type II</span></div>
+            <div class="infra-region">United States</div>
+          </div>
+          <div class="infra-row">
+            <div class="infra-logo">🤖</div>
+            <div class="infra-info"><div class="infra-name">AI Inference Layer</div><div class="infra-role">Proprietary AI models powering all deal analysis, agent execution, and intelligent document processing</div></div>
+            <div class="infra-cert"><span class="infra-cert-badge">No training on data</span><span class="infra-cert-badge">Server-side only</span></div>
+            <div class="infra-region">United States</div>
+          </div>
+          <div class="infra-row">
+            <div class="infra-logo">💳</div>
+            <div class="infra-info"><div class="infra-name">Stripe</div><div class="infra-role">Payment processing, subscription billing, invoicing</div></div>
+            <div class="infra-cert"><span class="infra-cert-badge">PCI DSS L1</span><span class="infra-cert-badge">SOC 2</span></div>
+            <div class="infra-region">Global</div>
+          </div>
+          <div class="infra-row">
+            <div class="infra-logo">⚙️</div>
+            <div class="infra-info"><div class="infra-name">Make.com</div><div class="infra-role">Workflow automation and integration infrastructure</div></div>
+            <div class="infra-cert"><span class="infra-cert-badge">GDPR</span><span class="infra-cert-badge">ISO 27001</span></div>
+            <div class="infra-region">EU / US</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ SLA ══ -->
+      <div class="trust-section" id="sla">
+        <div class="sec-hd">
+          <div class="sec-icon">📊</div>
+          <div><div class="sec-title">SLA &amp; Uptime Commitments</div><div class="sec-sub">Our contractual uptime targets and actual performance</div></div>
+        </div>
+
+        <!-- Live status link -->
+        <div class="status-link-card" style="margin-bottom:20px;">
+          <div class="slc-left">
+            <div class="slc-pulse"></div>
+            <div class="slc-text">
+              <h4>All Systems Operational</h4>
+              <p>View real-time status, uptime calendars, and incident history</p>
+            </div>
+          </div>
+          <a href="https://status.alethinx.ai" class="slc-link">View System Status →</a>
+        </div>
+
+        <div class="sla-table">
+          <div class="sla-head">
+            <div class="sla-head-cell">Service</div>
+            <div class="sla-head-cell">SLA Target</div>
+            <div class="sla-head-cell">90-Day Actual</div>
+            <div class="sla-head-cell">Credit Policy</div>
+          </div>
+          <div class="sla-row"><div class="sla-service">Deal Dashboard</div><div class="sla-target">99.5%</div><div class="sla-actual">99.82%</div><div class="sla-credit">10% credit if below target in any calendar month</div></div>
+          <div class="sla-row"><div class="sla-service">Deal Genie (AI Scoring)</div><div class="sla-target">99.0%</div><div class="sla-actual">99.64%</div><div class="sla-credit">10% credit if below target in any calendar month</div></div>
+          <div class="sla-row"><div class="sla-service">SEEKER AI</div><div class="sla-target">99.0%</div><div class="sla-actual">99.71%</div><div class="sla-credit">10% credit if below target in any calendar month</div></div>
+          <div class="sla-row"><div class="sla-service">Authentication</div><div class="sla-target">99.5%</div><div class="sla-actual">99.91%</div><div class="sla-credit">10% credit if below target in any calendar month</div></div>
+          <div class="sla-row"><div class="sla-service">AI Agents (all 7)</div><div class="sla-target">99.0%</div><div class="sla-actual">99.6% avg</div><div class="sla-credit">10% credit per affected agent per month</div></div>
+          <div class="sla-row"><div class="sla-service">Stripe Billing</div><div class="sla-target">99.9%</div><div class="sla-actual">99.94%</div><div class="sla-credit">Governed by Stripe's own SLA</div></div>
+        </div>
+      </div>
+
+      <!-- ══ COMPLIANCE ══ -->
+      <div class="trust-section" id="compliance">
+        <div class="sec-hd">
+          <div class="sec-icon">✅</div>
+          <div><div class="sec-title">Compliance &amp; Certifications</div><div class="sec-sub">Current posture and roadmap</div></div>
+        </div>
+        <div class="card-grid">
+          <div class="trust-card">
+            <div class="card-header"><span class="card-icon">🔐</span><span class="card-badge badge-progress">In Progress</span></div>
+            <div class="card-title">SOC 2 Type II</div>
+            <div class="card-desc">We are implementing SOC 2 Type II controls. Full audit is targeted for Q4 2026. Our infrastructure partners maintain SOC 2 certification.</div>
+          </div>
+          <div class="trust-card">
+            <div class="card-header"><span class="card-icon">🌍</span><span class="card-badge badge-active">Active</span></div>
+            <div class="card-title">GDPR Compliance</div>
+            <div class="card-desc">Data processing agreements are available on request. All user data access, export, and deletion requests are fulfilled within 5 business days via <a href="mailto:privacy@alethinx.ai" style="color:var(--brand)">privacy@alethinx.ai</a>.</div>
+          </div>
+          <div class="trust-card">
+            <div class="card-header"><span class="card-icon">🇺🇸</span><span class="card-badge badge-active">Active</span></div>
+            <div class="card-title">CCPA Compliance</div>
+            <div class="card-desc">California residents have full rights to access, correct, and delete their data. We do not sell personal information. Opt-out requests are honored within 15 days.</div>
+          </div>
+          <div class="trust-card">
+            <div class="card-header"><span class="card-icon">🏥</span><span class="card-badge badge-planned">Evaluating</span></div>
+            <div class="card-title">HIPAA</div>
+            <div class="card-desc">Alethinx AI is a deal intelligence platform, not a healthcare data processor. HIPAA is not currently applicable. If your use case requires it, please contact us.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ VULNERABILITY DISCLOSURE ══ -->
+      <div class="trust-section" id="disclosure">
+        <div class="sec-hd">
+          <div class="sec-icon">🐛</div>
+          <div><div class="sec-title">Vulnerability Disclosure</div><div class="sec-sub">Found something? We want to know.</div></div>
+        </div>
+        <div class="disclosure-form">
+          <h3>Responsible Disclosure Program</h3>
+          <p>We appreciate the security community's efforts to help keep Alethinx AI safe. If you've discovered a potential security vulnerability, please report it responsibly. We commit to responding within 2 business days and resolving critical issues within 72 hours.</p>
+          <div class="form-row">
+            <label class="form-label">Your Email (optional)</label>
+            <input class="form-input" type="email" placeholder="your@email.com"/>
+          </div>
+          <div class="form-row">
+            <label class="form-label">Vulnerability Description</label>
+            <textarea class="form-textarea" placeholder="Please describe the vulnerability, affected component, and steps to reproduce..."></textarea>
+          </div>
+          <button class="btn-submit" onclick="handleDisclosure(this)">Submit Report</button>
+        </div>
+      </div>
+
+    </div><!-- end left col -->
+
+    <!-- ══ SIDEBAR ══ -->
+    <div class="sidebar">
+
+      <div class="sidebar-card">
+        <h4>Quick Facts</h4>
+        <div class="sidebar-item"><span class="sidebar-item-lbl">Founded</span><span class="sidebar-item-val">2026</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-lbl">Incorporated</span><span class="sidebar-item-val">Delaware C-Corp</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-lbl">Data location</span><span class="sidebar-item-val">North America</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-lbl">Encryption</span><span class="sidebar-item-val sidebar-item-green">AES-256 / TLS 1.3</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-lbl">Auth standard</span><span class="sidebar-item-val">JWT / Signed Sessions</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-lbl">Data breaches</span><span class="sidebar-item-val sidebar-item-green">0 ever</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-lbl">Sells user data</span><span class="sidebar-item-val" style="color:var(--red)">Never</span></div>
+      </div>
+
+      <div class="sidebar-card">
+        <h4>Compliance Roadmap</h4>
+        <div class="sidebar-item"><span class="sidebar-item-lbl">GDPR</span><span class="card-badge badge-active" style="font-size:10px;padding:2px 7px;border-radius:4px;">Active</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-lbl">CCPA</span><span class="card-badge badge-active" style="font-size:10px;padding:2px 7px;border-radius:4px;">Active</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-lbl">SOC 2 Type II</span><span class="card-badge badge-progress" style="font-size:10px;padding:2px 7px;border-radius:4px;">Q4 2026</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-lbl">Pen Testing</span><span class="card-badge badge-progress" style="font-size:10px;padding:2px 7px;border-radius:4px;">Q3 2026</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-lbl">ISO 27001</span><span class="card-badge badge-planned" style="font-size:10px;padding:2px 7px;border-radius:4px;">2027</span></div>
+      </div>
+
+      <div class="sidebar-card">
+        <h4>Security Contacts</h4>
+        <div class="sidebar-item" style="flex-direction:column;align-items:flex-start;gap:4px;">
+          <span class="sidebar-item-lbl">Security issues</span>
+          <a href="mailto:security@alethinx.ai" style="color:var(--brand);font-family:'DM Mono',monospace;font-size:12px;font-weight:600;">security@alethinx.ai</a>
+        </div>
+        <div class="sidebar-item" style="flex-direction:column;align-items:flex-start;gap:4px;">
+          <span class="sidebar-item-lbl">Privacy requests</span>
+          <a href="mailto:privacy@alethinx.ai" style="color:var(--brand);font-family:'DM Mono',monospace;font-size:12px;font-weight:600;">privacy@alethinx.ai</a>
+        </div>
+        <div class="sidebar-item" style="flex-direction:column;align-items:flex-start;gap:4px;">
+          <span class="sidebar-item-lbl">General support</span>
+          <a href="mailto:support@alethinx.ai" style="color:var(--brand);font-family:'DM Mono',monospace;font-size:12px;font-weight:600;">support@alethinx.ai</a>
+        </div>
+        <div class="sidebar-item" style="flex-direction:column;align-items:flex-start;gap:4px;">
+          <span class="sidebar-item-lbl">Legal / DPA requests</span>
+          <a href="mailto:legal@alethinx.ai" style="color:var(--brand);font-family:'DM Mono',monospace;font-size:12px;font-weight:600;">legal@alethinx.ai</a>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h4>System Status</h4>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+          <div style="width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pg 2s infinite;flex-shrink:0;"></div>
+          <span style="font-size:13px;font-weight:600;color:var(--text-pri);">All Systems Operational</span>
+        </div>
+        <div style="font-size:12px;color:var(--text-muted);margin-bottom:14px;">15 services · 0 active incidents</div>
+        <a href="https://status.alethinx.ai" style="font-size:13px;font-weight:700;color:var(--brand);text-decoration:none;">View Status Dashboard →</a>
+      </div>
+
+    </div><!-- end sidebar -->
+  </div><!-- end two-col -->
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-copy">© 2026 Alethinx, Inc. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="https://alethinx.ai">alethinx.ai</a>
+    <a href="https://status.alethinx.ai">System Status</a>
+    <a href="mailto:privacy@alethinx.ai">Privacy</a>
+    <a href="mailto:legal@alethinx.ai">Legal</a>
+    <a href="https://alethinx.ai/terms">Terms</a>
+  </div>
+</footer>
+
+<script>
+function handleDisclosure(btn){
+  btn.textContent='✓ Report Submitted';
+  btn.style.background='var(--green)';
+  btn.disabled=true;
+  btn.closest('.disclosure-form').querySelector('p').textContent='Thank you. Our security team will review your report and respond within 2 business days.';
+}
+// Smooth anchor scroll
+document.querySelectorAll('.anchor-link').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const id=a.getAttribute('href').slice(1);
+    document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+</script>
+</body>
+</html>
