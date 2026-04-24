@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Alethinx</title>
+  <meta name="description" content="Privacy policy for Alethinx products. How we collect, use, and protect your data, including Google OAuth data handling.">
+  <link rel="canonical" href="https://trust.alethinx.ai/privacy">
+  <style>
+    :root {
+      --primary: #902DCE;
+      --deep: #2A0D5C;
+      --lavender: #EEE8FF;
+      --text: #1a1a2e;
+      --muted: #5a5a6e;
+      --border: #e5e0f0;
+      --bg: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .top-bar {
+      background: var(--deep);
+      color: white;
+      padding: 12px 24px;
+      font-size: 12px;
+      font-family: 'DM Mono', 'SF Mono', Menlo, monospace;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .top-bar a {
+      color: #c9b3f0;
+      text-decoration: none;
+    }
+    .top-bar a:hover { color: white; }
+    .header {
+      background: linear-gradient(135deg, var(--deep) 0%, var(--primary) 100%);
+      padding: 48px 24px 72px;
+      color: white;
+    }
+    .header-inner {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .brand-mark {
+      width: 32px;
+      height: 32px;
+      background: white;
+      color: var(--primary);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 18px;
+    }
+    .brand-name {
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: -0.01em;
+    }
+    .brand-sep {
+      opacity: 0.4;
+      font-weight: 300;
+    }
+    .brand-sub {
+      font-family: 'DM Mono', 'SF Mono', Menlo, monospace;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      opacity: 0.9;
+    }
+    .eyebrow {
+      font-family: 'DM Mono', 'SF Mono', Menlo, monospace;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .subtitle {
+      font-size: 18px;
+      opacity: 0.9;
+      max-width: 640px;
+    }
+    .meta-strip {
+      background: var(--lavender);
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--border);
+      font-family: 'DM Mono', 'SF Mono', Menlo, monospace;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+    }
+    .meta-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: var(--deep);
+    }
+    .content {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 56px 24px;
+    }
+    .toc {
+      background: var(--lavender);
+      border-left: 3px solid var(--primary);
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      border-radius: 0 8px 8px 0;
+    }
+    .toc-title {
+      font-family: 'DM Mono', 'SF Mono', Menlo, monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--deep);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+    .toc ol {
+      padding-left: 20px;
+      columns: 2;
+      column-gap: 24px;
+    }
+    .toc li {
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+    .toc a {
+      color: var(--deep);
+      text-decoration: none;
+    }
+    .toc a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--deep);
+      margin-top: 48px;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+      scroll-margin-top: 24px;
+    }
+    h2::before {
+      content: attr(data-num);
+      font-family: 'DM Mono', 'SF Mono', Menlo, monospace;
+      color: var(--primary);
+      font-size: 14px;
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+    h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    ul, ol.content-list {
+      margin: 16px 0 16px 24px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    strong {
+      color: var(--deep);
+      font-weight: 700;
+    }
+    .highlight-box {
+      background: var(--lavender);
+      border-left: 3px solid var(--primary);
+      padding: 16px 20px;
+      margin: 20px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .highlight-box p:last-child { margin-bottom: 0; }
+    a { color: var(--primary); text-decoration: underline; }
+    a:hover { text-decoration: none; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    th {
+      background: var(--deep);
+      color: white;
+      text-align: left;
+      padding: 12px;
+      font-family: 'DM Mono', 'SF Mono', Menlo, monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    td {
+      padding: 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+    .contact-card {
+      background: var(--deep);
+      color: white;
+      padding: 32px;
+      border-radius: 12px;
+      margin-top: 48px;
+    }
+    .contact-card h2 {
+      color: white;
+      margin-top: 0;
+    }
+    .contact-card h2::before { color: #c9b3f0; }
+    .contact-card a { color: #c9b3f0; }
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      background: #fafafa;
+    }
+    .footer a { color: var(--muted); margin: 0 12px; }
+    .footer-copy {
+      margin-top: 12px;
+      font-family: 'DM Mono', 'SF Mono', Menlo, monospace;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+    }
+    @media (max-width: 640px) {
+      .toc ol { columns: 1; }
+      .header { padding: 32px 20px 56px; }
+      .content { padding: 40px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <span>ALETHINX TRUST SUITE</span>
+    <a href="https://trust.alethinx.ai/">← Trust Center</a>
+  </div>
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-mark">A</div>
+        <span class="brand-name">Alethinx</span>
+        <span class="brand-sep">|</span>
+        <span class="brand-sub">trust</span>
+      </div>
+      <div class="eyebrow">LEGAL · DATA PRIVACY · PRODUCT POLICIES</div>
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">How Alethinx, Inc. collects, uses, and protects the data you share with our products — including data from connected services like Google.</p>
+    </div>
+  </header>
+
+  <div class="meta-strip">
+    <div class="meta-inner">
+      <span><strong>Effective:</strong> April 24, 2026</span>
+      <span><strong>Last updated:</strong> April 24, 2026</span>
+      <span><strong>Version:</strong> 1.0</span>
+    </div>
+  </div>
+
+  <main class="content">
+
+    <div class="toc">
+      <div class="toc-title">On this page</div>
+      <ol>
+        <li><a href="#who-we-are">Who we are</a></li>
+        <li><a href="#scope">Scope of this policy</a></li>
+        <li><a href="#data-we-collect">Data we collect</a></li>
+        <li><a href="#how-we-use">How we use your data</a></li>
+        <li><a href="#google-user-data">Google user data</a></li>
+        <li><a href="#ai-training">AI and model training</a></li>
+        <li><a href="#sharing">Sharing and disclosure</a></li>
+        <li><a href="#retention">Data retention</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#your-rights">Your rights and choices</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#international">International transfers</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </div>
+
+    <section id="who-we-are">
+      <h2 data-num="§ 01">Who we are</h2>
+      <p>This Privacy Policy applies to products and services operated by <strong>Alethinx, Inc.</strong>, a Delaware C-Corporation headquartered in McKinney, Texas (EIN 41-5313469). In this policy, "Alethinx," "we," "us," and "our" refer to Alethinx, Inc. and its authorized subsidiaries.</p>
+      <p>Our products include Alethinx Deal Intelligence, SERAPH, JIREH, GABRIEL, SOPHYNX, JOSEYNX, AGORNYX, and related tools served on domains including <a href="https://app.alethinx.ai">app.alethinx.ai</a>, <a href="https://www.alethinx.ai">www.alethinx.ai</a>, <a href="https://sophynx.ai">sophynx.ai</a>, and their subdomains.</p>
+    </section>
+
+    <section id="scope">
+      <h2 data-num="§ 02">Scope of this policy</h2>
+      <p>This policy covers personal data we collect, process, and store when you:</p>
+      <ul>
+        <li>Create an account or sign in to any Alethinx product</li>
+        <li>Connect a third-party service (such as Google) to your Alethinx account</li>
+        <li>Submit data into our products (deal memos, financial documents, business profiles, waitlist forms)</li>
+        <li>Communicate with us by email, chat, or form submission</li>
+        <li>Visit our public websites including marketing and support pages</li>
+      </ul>
+      <p>This policy does <strong>not</strong> cover third-party websites or services that you may access through links on our platforms. Those are governed by their own privacy policies.</p>
+    </section>
+
+    <section id="data-we-collect">
+      <h2 data-num="§ 03">Data we collect</h2>
+
+      <h3>3.1 Account data</h3>
+      <p>When you create an account, we collect your email address, display name, and authentication credentials. If you sign in with Google, we collect the minimum profile fields necessary to establish your identity (see Section 5).</p>
+
+      <h3>3.2 Product data</h3>
+      <p>Our products work by analyzing data you provide — deal memos, financial statements, company research, acquisition criteria, and similar materials. This data is stored in your authenticated workspace, encrypted at rest, and scoped to your account through row-level security.</p>
+
+      <h3>3.3 Usage and device data</h3>
+      <p>We collect technical logs including IP address, browser type, device identifiers, pages visited, feature interactions, and timestamps. We use this data to debug errors, prevent abuse, and improve the product. We do not sell this data or share it with advertising networks.</p>
+
+      <h3>3.4 Communications</h3>
+      <p>If you contact us by email or a support form, we retain the message and our response to provide continuity of support.</p>
+
+      <h3>3.5 Payment data</h3>
+      <p>Payment processing is handled by <a href="https://stripe.com/privacy">Stripe</a>. Alethinx does not store your full credit card details. We retain transaction metadata (amount, timestamp, last four digits, billing address) for accounting and compliance.</p>
+    </section>
+
+    <section id="how-we-use">
+      <h2 data-num="§ 04">How we use your data</h2>
+      <p>We process personal data strictly to operate, improve, and secure our products. Specifically:</p>
+      <ul>
+        <li><strong>Deliver the service</strong> — authenticating sessions, saving your work, delivering outputs, and syncing connected accounts</li>
+        <li><strong>Support and billing</strong> — responding to inquiries, processing payments, issuing refunds, and resolving disputes</li>
+        <li><strong>Security and abuse prevention</strong> — detecting fraud, preventing unauthorized access, and enforcing our Terms of Service</li>
+        <li><strong>Product improvement</strong> — analyzing aggregate, de-identified usage patterns to fix bugs and prioritize features</li>
+        <li><strong>Legal compliance</strong> — responding to valid legal requests and complying with applicable tax, financial, and regulatory obligations</li>
+      </ul>
+      <div class="highlight-box">
+        <p><strong>We do not sell personal data.</strong> We do not share personal data with advertising networks. We do not use your deal data, financial documents, or connected-account data for purposes beyond delivering the service you requested.</p>
+      </div>
+    </section>
+
+    <section id="google-user-data">
+      <h2 data-num="§ 05">Google user data</h2>
+      <p>If you sign in to an Alethinx product with Google or connect a Google service to your account, this section describes exactly what we access and how we use it.</p>
+
+      <h3>5.1 Scopes we request</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Google scope</th>
+            <th>Why we request it</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>openid</code>, <code>email</code>, <code>profile</code></td>
+            <td>Identify your account at sign-in. Display your name and profile photo in the Alethinx interface.</td>
+            <td>Non-sensitive</td>
+          </tr>
+          <tr>
+            <td><code>https://www.googleapis.com/auth/userinfo.email</code></td>
+            <td>Associate your Google identity with your Alethinx account so that subsequent sign-ins match the same workspace.</td>
+            <td>Non-sensitive</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Alethinx requests the <strong>minimum scopes necessary</strong> to authenticate users. If in the future we introduce features that require additional Google scopes (such as Drive or Calendar access), we will update this policy and request your explicit consent at the point where the new scope is needed.</p>
+
+      <h3>5.2 How Google user data is used</h3>
+      <ul>
+        <li><strong>Authentication only.</strong> We use your Google identity to confirm who you are when you sign in.</li>
+        <li><strong>Profile display.</strong> Your name and profile photo appear in your own Alethinx dashboard so you can confirm the correct account is active.</li>
+        <li><strong>Session continuity.</strong> Your Google identifier is bound to your Alethinx user record so that subsequent sign-ins resolve to the same workspace.</li>
+      </ul>
+
+      <h3>5.3 How Google user data is stored and shared</h3>
+      <ul>
+        <li>Google tokens are stored encrypted at rest within our authentication provider (Supabase Auth), which is SOC 2 Type II certified.</li>
+        <li>Google user data is <strong>not</strong> shared with any third party except as necessary to operate the authentication flow (for example, Google itself, Supabase as our authentication vendor, and hosting infrastructure).</li>
+        <li>Google user data is <strong>not</strong> used to train AI or machine learning models. See Section 6.</li>
+        <li>Google user data is <strong>not</strong> sold, rented, or made available to advertisers.</li>
+        <li>Our use and transfer of information received from Google APIs to any other app will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</li>
+      </ul>
+
+      <h3>5.4 Revoking Google access</h3>
+      <p>You may revoke Alethinx's access to your Google account at any time:</p>
+      <ol class="content-list">
+        <li>Visit <a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a></li>
+        <li>Select "Alethinx" in the third-party apps list</li>
+        <li>Click "Remove Access"</li>
+      </ol>
+      <p>Revoking access will sign you out of Alethinx if Google was your only sign-in method. You can also contact us at <a href="mailto:privacy@alethinx.ai">privacy@alethinx.ai</a> to request complete deletion of your account and all associated data.</p>
+    </section>
+
+    <section id="ai-training">
+      <h2 data-num="§ 06">AI and model training</h2>
+      <div class="highlight-box">
+        <p><strong>We do not use your data to train AI or machine learning models.</strong></p>
+      </div>
+      <p>Alethinx products use AI models to deliver results (deal scoring, document analysis, agent outputs). These models are:</p>
+      <ul>
+        <li>Operated by third-party AI providers (including Anthropic and OpenAI) under Zero Data Retention or equivalent no-training agreements where available</li>
+        <li>Queried on-demand with the data you submit for the purpose of generating the output you requested</li>
+        <li>Not used as training signal by Alethinx, our vendors, or any downstream party</li>
+      </ul>
+      <p>Your deal memos, financial documents, and Google user data are <strong>not</strong> added to any training dataset.</p>
+    </section>
+
+    <section id="sharing">
+      <h2 data-num="§ 07">Sharing and disclosure</h2>
+      <p>We share personal data only in limited circumstances:</p>
+      <ul>
+        <li><strong>Service providers.</strong> We use vendors for infrastructure, authentication, payment processing, AI model inference, email delivery, and customer support. These vendors are bound by contractual data protection obligations and may only process data on our instructions.</li>
+        <li><strong>Legal obligations.</strong> If we receive a valid legal request (subpoena, court order, law enforcement request), we may disclose data as required by applicable law. We will notify you unless prohibited.</li>
+        <li><strong>Business transfers.</strong> If Alethinx is acquired, merged, or sells substantially all of its assets, your personal data may transfer to the acquiring entity under the same or stricter privacy commitments.</li>
+        <li><strong>With your consent.</strong> If you ask us to share data with a third party (such as an integration you set up), we will share only the data needed for that integration.</li>
+      </ul>
+    </section>
+
+    <section id="retention">
+      <h2 data-num="§ 08">Data retention</h2>
+      <p>We retain personal data for as long as your account is active and for a reasonable period afterward to comply with legal obligations, resolve disputes, and enforce agreements.</p>
+      <ul>
+        <li><strong>Account data</strong> — retained while your account is active; deleted within 30 days of account closure upon request.</li>
+        <li><strong>Product data</strong> (deal memos, documents) — retained per your account settings; permanently deleted within 30 days of account closure or on explicit deletion request.</li>
+        <li><strong>Logs and security data</strong> — retained up to 90 days for troubleshooting and abuse prevention, then purged.</li>
+        <li><strong>Payment records</strong> — retained for 7 years to satisfy tax and accounting requirements (US).</li>
+        <li><strong>Google user data</strong> — deleted within 30 days of you revoking access or closing your account.</li>
+      </ul>
+    </section>
+
+    <section id="security">
+      <h2 data-num="§ 09">Security</h2>
+      <p>We take reasonable technical and organizational measures to protect personal data against unauthorized access, disclosure, alteration, and destruction. Measures include:</p>
+      <ul>
+        <li>AES-256 encryption at rest for all database-stored data</li>
+        <li>TLS 1.3 for all data in transit</li>
+        <li>Row-level security enforcing per-user data isolation in our database</li>
+        <li>Role-based access control for employees and contractors who may access production systems</li>
+        <li>Regular security reviews and third-party infrastructure (Supabase SOC 2 Type II, Vercel SOC 2 Type II)</li>
+      </ul>
+      <p>No system is perfectly secure. If we become aware of a security incident affecting your data, we will notify you in accordance with applicable law.</p>
+    </section>
+
+    <section id="your-rights">
+      <h2 data-num="§ 10">Your rights and choices</h2>
+      <p>Depending on your jurisdiction, you may have the right to:</p>
+      <ul>
+        <li><strong>Access</strong> the personal data we hold about you</li>
+        <li><strong>Correct</strong> inaccurate data</li>
+        <li><strong>Delete</strong> your account and associated data</li>
+        <li><strong>Export</strong> your data in a machine-readable format</li>
+        <li><strong>Object</strong> to certain processing activities</li>
+        <li><strong>Withdraw consent</strong> you previously granted</li>
+      </ul>
+      <p>To exercise any of these rights, email us at <a href="mailto:privacy@alethinx.ai">privacy@alethinx.ai</a>. We will respond within 30 days.</p>
+      <p>Residents of California (CCPA/CPRA), the European Economic Area (GDPR), the United Kingdom (UK GDPR), and other jurisdictions with comparable frameworks have specific additional rights. We honor all valid requests under applicable law.</p>
+    </section>
+
+    <section id="children">
+      <h2 data-num="§ 11">Children</h2>
+      <p>Alethinx products are not directed to individuals under 18. We do not knowingly collect personal data from children. If you believe a child has provided us with personal data, email <a href="mailto:privacy@alethinx.ai">privacy@alethinx.ai</a> and we will delete it promptly.</p>
+    </section>
+
+    <section id="international">
+      <h2 data-num="§ 12">International transfers</h2>
+      <p>Alethinx is based in the United States. If you access our products from outside the US, your data may be transferred to, stored in, and processed in the United States. We rely on appropriate safeguards (such as Standard Contractual Clauses) for transfers from jurisdictions that require them.</p>
+    </section>
+
+    <section id="changes">
+      <h2 data-num="§ 13">Changes to this policy</h2>
+      <p>We may update this Privacy Policy from time to time. The "Last updated" date at the top of this page indicates when the policy was last revised. If we make material changes, we will notify you by email or through an in-product notice before the changes take effect.</p>
+      <p>Historical versions of this policy are available on request.</p>
+    </section>
+
+    <section id="contact" class="contact-card">
+      <h2 data-num="§ 14">Contact</h2>
+      <p>For any privacy question, request, or concern, contact us at:</p>
+      <p>
+        <strong>Email:</strong> <a href="mailto:privacy@alethinx.ai">privacy@alethinx.ai</a><br>
+        <strong>General:</strong> <a href="mailto:mark@alethinx.ai">mark@alethinx.ai</a><br>
+        <strong>Entity:</strong> Alethinx, Inc.<br>
+        <strong>Jurisdiction:</strong> Delaware C-Corporation<br>
+        <strong>Location:</strong> McKinney, Texas, United States
+      </p>
+      <p>We aim to respond to all privacy inquiries within 5 business days.</p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div>
+      <a href="https://trust.alethinx.ai/">Trust Center</a>
+      <a href="https://trust.alethinx.ai/privacy">Privacy</a>
+      <a href="https://trust.alethinx.ai/terms">Terms</a>
+      <a href="https://www.alethinx.ai/">Alethinx</a>
+    </div>
+    <div class="footer-copy">© 2026 ALETHINX, INC. ALL RIGHTS RESERVED. PROPRIETARY AND CONFIDENTIAL.</div>
+  </footer>
+
+</body>
+</html>
