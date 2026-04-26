@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Alethinx</title>
+  <meta name="description" content="Terms of Service for Alethinx products. The agreement between Alethinx, Inc. and customers using our deal intelligence, AI, and SaaS tools.">
+  <link rel="canonical" href="https://trust.alethinx.ai/terms">
+  <style>
+    :root {
+      --primary: #902DCE;
+      --deep: #2A0D5C;
+      --lavender: #EEE8FF;
+      --text: #1a1a2e;
+      --muted: #5a5a6e;
+      --border: #e5e0f0;
+      --bg: #ffffff;
+      --warn-bg: #fff7ed;
+      --warn-border: #fb923c;
+      --warn-text: #7c2d12;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .top-bar {
+      background: var(--deep);
+      color: white;
+      padding: 12px 24px;
+      font-size: 12px;
+      font-family: 'DM Mono', 'SF Mono', Menlo, monospace;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .top-bar a {
+      color: #c9b3f0;
+      text-decoration: none;
+    }
+    .top-bar a:hover { color: white; }
+    .header {
+      background: linear-gradient(135deg, var(--deep) 0%, var(--primary) 100%);
+      padding: 48px 24px 72px;
+      color: white;
+    }
+    .header-inner {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .brand-mark {
+      width: 32px;
+      height: 32px;
+      background: white;
+      color: var(--primary);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 18px;
+    }
+    .brand-name {
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: -0.01em;
+    }
+    .brand-sep {
+      opacity: 0.4;
+      font-weight: 300;
+    }
+    .brand-sub {
+      font-family: 'DM Mono', 'SF Mono', Menlo, monospace;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      opacity: 0.9;
+    }
+    .eyebrow {
+      font-family: 'DM Mono', 'SF Mono', Menlo, monospace;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .subtitle {
+      font-size: 18px;
+      opacity: 0.9;
+      max-width: 640px;
+    }
+    .meta-strip {
+      background: var(--lavender);
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--border);
+      font-family: 'DM Mono', 'SF Mono', Menlo, monospace;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+    }
+    .meta-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: var(--deep);
+    }
+    .draft-banner {
+      background: var(--warn-bg);
+      border-bottom: 1px solid var(--warn-border);
+      padding: 14px 24px;
+    }
+    .draft-banner-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      font-size: 13px;
+      color: var(--warn-text);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .draft-banner-inner strong {
+      color: var(--warn-text);
+      font-weight: 800;
+    }
+    .draft-banner-icon {
+      flex-shrink: 0;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .content {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 56px 24px;
+    }
+    .toc {
+      background: var(--lavender);
+      border-left: 3px solid var(--primary);
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      border-radius: 0 8px 8px 0;
+    }
+    .toc-title {
+      font-family: 'DM Mono', 'SF Mono', Menlo, monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--deep);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+    .toc ol {
+      padding-left: 20px;
+      columns: 2;
+      column-gap: 24px;
+    }
+    .toc li {
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+    .toc a {
+      color: var(--deep);
+      text-decoration: none;
+    }
+    .toc a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--deep);
+      margin-top: 48px;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+      scroll-margin-top: 24px;
+    }
+    h2::before {
+      content: attr(data-num);
+      font-family: 'DM Mono', 'SF Mono', Menlo, monospace;
+      color: var(--primary);
+      font-size: 14px;
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+    h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    ul, ol.content-list {
+      margin: 16px 0 16px 24px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    strong {
+      color: var(--deep);
+      font-weight: 700;
+    }
+    .highlight-box {
+      background: var(--lavender);
+      border-left: 3px solid var(--primary);
+      padding: 16px 20px;
+      margin: 20px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .highlight-box p:last-child { margin-bottom: 0; }
+    .caution-box {
+      background: #fffbeb;
+      border-left: 3px solid #f59e0b;
+      padding: 16px 20px;
+      margin: 20px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .caution-box p:last-child { margin-bottom: 0; }
+    a { color: var(--primary); text-decoration: underline; }
+    a:hover { text-decoration: none; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    th {
+      background: var(--deep);
+      color: white;
+      text-align: left;
+      padding: 12px;
+      font-family: 'DM Mono', 'SF Mono', Menlo, monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    td {
+      padding: 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+    .contact-card {
+      background: var(--deep);
+      color: white;
+      padding: 32px;
+      border-radius: 12px;
+      margin-top: 48px;
+    }
+    .contact-card h2 {
+      color: white;
+      margin-top: 0;
+    }
+    .contact-card h2::before { color: #c9b3f0; }
+    .contact-card p { color: rgba(255,255,255,0.92); }
+    .contact-card strong { color: #ffffff; }
+    .contact-card a { color: #c9b3f0; }
+    .contact-card a:hover { color: #ffffff; }
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      background: #fafafa;
+    }
+    .footer a { color: var(--muted); margin: 0 12px; }
+    .footer-copy {
+      margin-top: 12px;
+      font-family: 'DM Mono', 'SF Mono', Menlo, monospace;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+    }
+    @media (max-width: 640px) {
+      .toc ol { columns: 1; }
+      .header { padding: 32px 20px 56px; }
+      .content { padding: 40px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <span>ALETHINX TRUST SUITE</span>
+    <a href="https://trust.alethinx.ai/">← Trust Center</a>
+  </div>
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-mark"><svg viewBox="0 0 566.73 519.47" xmlns="http://www.w3.org/2000/svg" style="width:22px;height:22px;display:block;"><path fill="#902DCE" d="M509.9,519.47c-31.69,0-49.08-13-65.71-40.89l-59.93-100.52h-37.24L287.1,478.59c-16.63,27.89-30.71,39.56-62.41,39.56c-31.69,0-75.82-32.88-43.97-84.68l77.2-129.47c6.65-11.15,18.67-17.98,31.65-17.98h152.14c12.98,0,25,6.83,31.65,17.98l85.07,142.67C585.13,491.46,541.59,519.47,509.9,519.47z"/><path fill="#902DCE" d="M530.4,79.76l-92.73,159.15c-3.24,5.57-9.2,8.99-15.65,8.99H304.59c-6.44,0-12.4-3.42-15.65-8.99l-61.3-105.2L110.57,334.72c-12.57,21.57-12.84,48.17-0.74,70.02l36.94,66.61c11.55,20.85-3.53,46.43-27.36,46.43h-4.46c-18.06,0-34.67-9.8-43.43-25.58l-28.27-50.97L9.17,379.72c-12.34-22.28-12.22-49.37,0.34-71.53L177.11,12.52C181.5,4.79,189.69,0,198.59,0h58.64c8.8,0,16.92,4.68,21.35,12.27l89.35,153.6l71-121.82c0.02-0.03,0.05-0.07,0.07-0.12l8.99-15.42c8.76-12.77,24.02-27.61,51.7-27.61C541.19,0.9,551.42,43.69,530.4,79.76z"/></svg></div>
+        <span class="brand-name">Alethinx</span>
+        <span class="brand-sep">|</span>
+        <span class="brand-sub">trust</span>
+      </div>
+      <div class="eyebrow">LEGAL · TERMS · PRODUCT POLICIES</div>
+      <h1>Terms of Service</h1>
+      <p class="subtitle">The agreement between Alethinx, Inc. and customers using our deal intelligence, AI, and software products.</p>
+    </div>
+  </header>
+
+  <div class="meta-strip">
+    <div class="meta-inner">
+      <span><strong>Effective:</strong> April 26, 2026</span>
+      <span><strong>Last updated:</strong> April 26, 2026</span>
+      <span><strong>Version:</strong> 1.0</span>
+    </div>
+  </div>
+
+  <main class="content">
+
+    <div class="toc">
+      <div class="toc-title">On this page</div>
+      <ol>
+        <li><a href="#acceptance">Acceptance and eligibility</a></li>
+        <li><a href="#the-service">The Service</a></li>
+        <li><a href="#accounts">Your account</a></li>
+        <li><a href="#subscriptions">Subscriptions, fees, and billing</a></li>
+        <li><a href="#acceptable-use">Acceptable use</a></li>
+        <li><a href="#user-content">Your content</a></li>
+        <li><a href="#ai-outputs">AI outputs and limitations</a></li>
+        <li><a href="#intellectual-property">Intellectual property</a></li>
+        <li><a href="#confidentiality">Confidentiality</a></li>
+        <li><a href="#third-party">Third-party services</a></li>
+        <li><a href="#warranties">Disclaimer of warranties</a></li>
+        <li><a href="#liability">Limitation of liability</a></li>
+        <li><a href="#indemnification">Indemnification</a></li>
+        <li><a href="#termination">Termination</a></li>
+        <li><a href="#governing-law">Governing law and disputes</a></li>
+        <li><a href="#changes">Changes to these Terms</a></li>
+        <li><a href="#miscellaneous">Miscellaneous</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </div>
+
+    <section id="acceptance">
+      <h2 data-num="§ 01">Acceptance and eligibility</h2>
+      <p>These Terms of Service ("<strong>Terms</strong>") form a binding agreement between you and <strong>Alethinx, Inc.</strong>, a Delaware C-Corporation headquartered in McKinney, Texas (EIN 41-5313469) ("<strong>Alethinx</strong>," "<strong>we</strong>," "<strong>us</strong>"). By creating an account, accessing, or using any Alethinx product or service (the "<strong>Service</strong>"), you agree to these Terms and our <a href="https://trust.alethinx.ai/privacy">Privacy Policy</a>.</p>
+      <p>You may use the Service only if you are at least 18 years old and legally capable of entering into a binding contract under the laws of your jurisdiction. If you are using the Service on behalf of a company or other legal entity, you represent that you have authority to bind that entity to these Terms, and "you" refers to that entity.</p>
+      <p>If you do not agree to these Terms, you must not use the Service.</p>
+    </section>
+
+    <section id="the-service">
+      <h2 data-num="§ 02">The Service</h2>
+      <p>The Service consists of software-as-a-service products operated by Alethinx, including but not limited to <strong>Alethinx Deal Intelligence</strong>, <strong>SERAPH</strong>, <strong>JIREH</strong>, <strong>GABRIEL</strong>, <strong>SOPHYNX</strong>, <strong>JOSEYNX</strong>, <strong>AGORNYX</strong>, and related tools served on domains including <a href="https://app.alethinx.ai">app.alethinx.ai</a>, <a href="https://www.alethinx.ai">www.alethinx.ai</a>, <a href="https://sophynx.ai">sophynx.ai</a>, and their subdomains.</p>
+      <p>The Service is designed for use by mergers and acquisitions ("M&A") professionals, search-fund and ETA buyers, private equity teams, independent sponsors, business owners, and similar audiences. The Service may include AI-driven analytical tools, document processing, scoring engines, automated workflows, and reporting features.</p>
+
+      <h3>2.1 Beta and preview features</h3>
+      <p>From time to time we may offer beta, preview, or early-access features. These are provided "as is" with no warranties, may be modified or discontinued without notice, and may have additional usage restrictions communicated at the point of access.</p>
+
+      <h3>2.2 Service availability</h3>
+      <p>We aim for high availability but do not guarantee uninterrupted access. Scheduled maintenance, third-party service disruptions, network issues, and unforeseen events may cause downtime. Our public uptime targets are summarized in our <a href="https://trust.alethinx.ai/#sla">SLA & Uptime Commitments</a> and reported live at <a href="https://status.alethinx.ai">status.alethinx.ai</a>.</p>
+    </section>
+
+    <section id="accounts">
+      <h2 data-num="§ 03">Your account</h2>
+      <p>To use most features of the Service you must create an account. You agree to:</p>
+      <ul>
+        <li>Provide accurate, current, and complete information during registration</li>
+        <li>Keep your authentication credentials confidential</li>
+        <li>Be responsible for all activity that occurs under your account</li>
+        <li>Notify us promptly at <a href="mailto:security@alethinx.ai">security@alethinx.ai</a> if you suspect unauthorized access</li>
+      </ul>
+      <p>You may not share account credentials, transfer your account, or create accounts using automated means. We may suspend or terminate accounts that we reasonably believe violate these Terms.</p>
+    </section>
+
+    <section id="subscriptions">
+      <h2 data-num="§ 04">Subscriptions, fees, and billing</h2>
+
+      <h3>4.1 Plans and pricing</h3>
+      <p>The Service is offered under subscription plans (currently <strong>Starter (free)</strong>, <strong>Pro</strong>, and <strong>Business</strong>) with optional add-on engines (SERAPH, JIREH, GABRIEL, SOPHYNX, JOSEYNX, AGORNYX). Current pricing is published at <a href="https://app.alethinx.ai/pricing">app.alethinx.ai/pricing</a> and is subject to change with at least 30 days' notice for active subscribers.</p>
+
+      <h3>4.2 Billing</h3>
+      <p>Paid plans are billed in advance through our payment processor, <a href="https://stripe.com">Stripe</a>. By providing a payment method, you authorize Alethinx and Stripe to charge that method for all subscription fees, applicable taxes, overage charges, and any other amounts owed. You are responsible for keeping your payment information current.</p>
+
+      <h3>4.3 Auto-renewal</h3>
+      <p>Subscriptions automatically renew at the end of each billing period (monthly or annual, depending on plan) at the then-current rate, unless cancelled before the renewal date. You may cancel auto-renewal at any time from within the Service or by emailing <a href="mailto:billing@alethinx.ai">billing@alethinx.ai</a>.</p>
+
+      <h3>4.4 Refunds</h3>
+      <p>Except where required by applicable law or expressly stated in these Terms, fees are non-refundable. We may, in our sole discretion, offer pro-rated refunds for verified service outages exceeding the SLA targets, in accordance with the credit policies described at <a href="https://trust.alethinx.ai/#sla">trust.alethinx.ai/#sla</a>.</p>
+
+      <h3>4.5 Taxes</h3>
+      <p>Fees do not include taxes, levies, or duties imposed by taxing authorities. You are responsible for paying all such taxes other than those based on Alethinx's net income.</p>
+    </section>
+
+    <section id="acceptable-use">
+      <h2 data-num="§ 05">Acceptable use</h2>
+      <p>You agree not to, and not to permit any third party to:</p>
+      <ul>
+        <li><strong>Misuse the Service</strong> — including using it to violate any law, regulation, third-party right, or these Terms</li>
+        <li><strong>Reverse engineer</strong> the Service, our AI models, prompts, scoring methodologies, or any underlying technology</li>
+        <li><strong>Extract or scrape</strong> Service outputs at scale for the purpose of training competing AI models, building competing services, or republishing without our written consent</li>
+        <li><strong>Interfere with the Service</strong> — through denial-of-service attacks, attempts to gain unauthorized access, vulnerability probing without authorization, or attempts to bypass authentication, rate limits, or row-level security controls</li>
+        <li><strong>Transmit harmful content</strong> — including malware, viruses, deceptive code, or any content that infringes intellectual property, defames third parties, or violates privacy or publicity rights</li>
+        <li><strong>Use the Service for prohibited purposes</strong> — including weapons development, unlawful surveillance, harassment, fraud, securities manipulation, money laundering, or any activity that would violate applicable financial-services, sanctions, or export-control laws</li>
+        <li><strong>Resell, sublicense, or share access</strong> to the Service except as expressly permitted by your subscription plan or a separate written agreement</li>
+        <li><strong>Submit deceptive prompts or content</strong> intended to subvert AI safety mechanisms, extract proprietary prompts, or cause the Service to generate harmful or unlawful content</li>
+      </ul>
+      <p>Violations of this Section may result in immediate suspension or termination, and we may report serious violations to law enforcement or affected third parties.</p>
+    </section>
+
+    <section id="user-content">
+      <h2 data-num="§ 06">Your content</h2>
+      <p><strong>You retain ownership of your content.</strong> "Your content" means any data, documents, deal memos, financial information, files, prompts, configurations, and other materials you submit to the Service.</p>
+
+      <h3>6.1 License to operate the Service</h3>
+      <p>You grant Alethinx a limited, non-exclusive, worldwide, royalty-free license to host, store, copy, transmit, display, and process your content solely as needed to operate the Service for you, deliver outputs you request, support and secure the Service, and comply with legal obligations. This license terminates when your content is deleted from the Service, except for retained backups, audit logs, and similar artifacts purged on the schedule described in our <a href="https://trust.alethinx.ai/privacy">Privacy Policy</a>.</p>
+
+      <h3>6.2 No use for AI training</h3>
+      <div class="highlight-box">
+        <p><strong>We do not use your content to train AI or machine learning models.</strong> Your deal data, financial documents, prompts, and connected-account data are not added to any training dataset operated by Alethinx, our AI vendors, or any downstream party.</p>
+      </div>
+
+      <h3>6.3 Your responsibility for content</h3>
+      <p>You represent and warrant that you have all necessary rights, licenses, and permissions to submit your content to the Service, and that your content does not violate applicable law or any third-party right. You are solely responsible for the legality, accuracy, and integrity of your content.</p>
+    </section>
+
+    <section id="ai-outputs">
+      <h2 data-num="§ 07">AI outputs and limitations</h2>
+
+      <div class="caution-box">
+        <p><strong>Read this section carefully.</strong> Alethinx products produce AI-generated outputs. You must not rely on these outputs as professional advice or as a substitute for human judgment in regulated decisions.</p>
+      </div>
+
+      <h3>7.1 Probabilistic outputs</h3>
+      <p>The Service incorporates artificial intelligence and machine-learning models. AI outputs are probabilistic, may contain errors or inaccuracies ("hallucinations"), and may not reflect current facts. Outputs are produced from inputs you provide and from underlying training data — neither of which is guaranteed to be complete, current, or correct.</p>
+
+      <h3>7.2 Not professional advice</h3>
+      <p>The Service is an analytical and productivity tool. <strong>It is not, and shall not be construed as:</strong></p>
+      <ul>
+        <li>Legal advice, an attorney-client relationship, or legal representation</li>
+        <li>Financial, investment, brokerage, or securities advice</li>
+        <li>Tax, accounting, or audit advice</li>
+        <li>Insurance underwriting or actuarial determination</li>
+        <li>An investment recommendation, solicitation, or offer to buy or sell any security</li>
+        <li>Medical, psychological, or healthcare advice</li>
+      </ul>
+      <p>Alethinx is not a registered broker-dealer, investment adviser, certified public accounting firm, attorney, fiduciary, or any other regulated professional. Outputs of the Service are for informational purposes only.</p>
+
+      <h3>7.3 Your obligation to verify</h3>
+      <p>You agree to independently verify any AI output before relying on it, and to consult appropriate licensed professionals (attorney, CPA, financial advisor, broker-dealer, banker, valuation expert) before making any material acquisition, investment, capital, tax, legal, or other regulated decision. You assume sole responsibility for decisions and actions based on Service outputs.</p>
+
+      <h3>7.4 No fiduciary duty</h3>
+      <p>Use of the Service does not create any fiduciary, advisory, or trust relationship between you and Alethinx.</p>
+    </section>
+
+    <section id="intellectual-property">
+      <h2 data-num="§ 08">Intellectual property</h2>
+
+      <h3>8.1 Alethinx IP</h3>
+      <p>The Service, including its software, source code, models, prompts, scoring methodologies, system designs, agent architectures, brand assets, and documentation, is owned by Alethinx, its licensors, or its affiliated rights holders, and is protected by intellectual-property laws of the United States and other jurisdictions. Alethinx maintains <strong>provisional patent filings</strong> covering certain components of the Service (collectively referred to as "Patents Filed").</p>
+      <p>Subject to your compliance with these Terms, Alethinx grants you a limited, non-exclusive, non-transferable, revocable license to access and use the Service during your active subscription. No other rights are granted by implication, estoppel, or otherwise.</p>
+
+      <h3>8.2 Output license to you</h3>
+      <p>Subject to these Terms, Alethinx assigns to you all rights, title, and interest in the AI-generated outputs produced for you from your content ("<strong>Outputs</strong>"), to the extent such rights can be assigned under applicable law. You may use Outputs for any lawful purpose, including commercial use.</p>
+      <p>Because AI outputs are probabilistic, identical or similar outputs may be produced for other users from independent inputs. Alethinx does not warrant that Outputs are unique to you, or that they do not resemble outputs produced for others.</p>
+
+      <h3>8.3 Feedback</h3>
+      <p>If you provide suggestions, ideas, feature requests, or other feedback ("<strong>Feedback</strong>"), you grant Alethinx a perpetual, irrevocable, worldwide, royalty-free license to use the Feedback for any purpose, including improving the Service. Feedback is not confidential.</p>
+
+      <h3>8.4 Trademarks</h3>
+      <p>"Alethinx," "SERAPH," "JIREH," "GABRIEL," "SOPHYNX," "JOSEYNX," "AGORNYX," and the Alethinx logo are trademarks of Alethinx, Inc. Use of any Alethinx trademark requires our prior written consent, except for nominative fair use.</p>
+    </section>
+
+    <section id="confidentiality">
+      <h2 data-num="§ 09">Confidentiality</h2>
+      <p>Each party may receive non-public information from the other in connection with the Service ("<strong>Confidential Information</strong>"). Confidential Information includes your content, our pricing and product roadmap, security architecture, source code, and any information identified as confidential or that should reasonably be understood as confidential given its nature.</p>
+      <p>Each party agrees to (a) protect the other's Confidential Information with at least the same degree of care it uses for its own confidential information, and in no event less than reasonable care, (b) use Confidential Information only as necessary to perform under these Terms, and (c) not disclose Confidential Information to third parties except to employees, contractors, or service providers who are bound by confidentiality obligations no less protective than these.</p>
+      <p>These obligations do not apply to information that is publicly known through no fault of the receiving party, was independently developed without use of the other's Confidential Information, was rightfully received from a third party without confidentiality restrictions, or is required to be disclosed by law (with prompt notice to the other party where legally permitted).</p>
+    </section>
+
+    <section id="third-party">
+      <h2 data-num="§ 10">Third-party services</h2>
+      <p>The Service relies on third-party infrastructure and AI providers, including but not limited to Vercel (hosting), Supabase (database and authentication), Stripe (payments), Anthropic, OpenAI, and similar AI inference vendors. The full vendor stack is published at <a href="https://trust.alethinx.ai/#infrastructure">trust.alethinx.ai/#infrastructure</a>.</p>
+      <p>The Service may also integrate with optional third-party services that you choose to connect (such as Google sign-in). Use of those third-party services is governed by the terms of those providers, not by these Terms. Alethinx is not responsible for the acts, omissions, performance, security, or content of any third-party service.</p>
+    </section>
+
+    <section id="warranties">
+      <h2 data-num="§ 11">Disclaimer of warranties</h2>
+      <p style="text-transform:uppercase;font-weight:600;font-size:13px;line-height:1.6;letter-spacing:0.02em;">The Service is provided "as is" and "as available," without warranties of any kind, whether express, implied, statutory, or otherwise. To the maximum extent permitted by applicable law, Alethinx disclaims all warranties, including warranties of merchantability, fitness for a particular purpose, non-infringement, accuracy, completeness, uninterrupted operation, error-free operation, and the absence of harmful components.</p>
+      <p style="text-transform:uppercase;font-weight:600;font-size:13px;line-height:1.6;letter-spacing:0.02em;">Without limiting the foregoing, Alethinx makes no warranty that AI outputs will be accurate, complete, current, fit for any specific purpose, or appropriate for any acquisition, investment, or other regulated decision.</p>
+      <p>Some jurisdictions do not allow exclusion of certain warranties; in those jurisdictions, the foregoing exclusions apply to the maximum extent permitted by law.</p>
+    </section>
+
+    <section id="liability">
+      <h2 data-num="§ 12">Limitation of liability</h2>
+      <p style="text-transform:uppercase;font-weight:600;font-size:13px;line-height:1.6;letter-spacing:0.02em;">To the maximum extent permitted by applicable law, in no event will Alethinx, its affiliates, officers, directors, employees, agents, or licensors be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages, including lost profits, lost revenue, lost goodwill, lost business opportunity, lost data, or business interruption, arising out of or related to these Terms or the Service, regardless of the legal theory and even if Alethinx has been advised of the possibility of such damages.</p>
+      <p style="text-transform:uppercase;font-weight:600;font-size:13px;line-height:1.6;letter-spacing:0.02em;">Alethinx's aggregate liability arising out of or related to these Terms or the Service will not exceed the greater of (a) the amounts you paid to Alethinx for the Service in the twelve (12) months preceding the event giving rise to the claim, or (b) one hundred US dollars (US $100).</p>
+      <p>These limitations apply even if a remedy fails of its essential purpose. Some jurisdictions do not allow limitation of certain damages; in those jurisdictions, the foregoing limitations apply to the maximum extent permitted by law.</p>
+    </section>
+
+    <section id="indemnification">
+      <h2 data-num="§ 13">Indemnification</h2>
+      <p>You agree to defend, indemnify, and hold harmless Alethinx and its affiliates, officers, directors, employees, and agents from and against any claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising out of or related to (a) your content, (b) your use or misuse of the Service, (c) your breach of these Terms or any law, or (d) your violation of any third-party right, including intellectual-property, privacy, or publicity rights.</p>
+      <p>Alethinx will provide prompt notice of any claim subject to indemnification, reasonable cooperation in the defense, and the right to participate in the defense at your expense. You will not settle any claim that imposes any obligation on Alethinx without our prior written consent.</p>
+    </section>
+
+    <section id="termination">
+      <h2 data-num="§ 14">Termination</h2>
+
+      <h3>14.1 By you</h3>
+      <p>You may cancel your subscription and close your account at any time. Cancellation takes effect at the end of the then-current billing period unless you request immediate termination. After account closure, your data will be deleted on the schedule described in our <a href="https://trust.alethinx.ai/privacy#retention">Privacy Policy</a>, subject to limited retention for legal, billing, and audit purposes.</p>
+
+      <h3>14.2 By Alethinx</h3>
+      <p>We may suspend or terminate your access to the Service immediately if (a) you breach these Terms, (b) we are required to do so by law, (c) your account presents a security risk to the Service or other users, (d) extended non-payment occurs, or (e) we discontinue the Service entirely. Where reasonably practicable, we will provide notice and an opportunity to cure non-material breaches.</p>
+
+      <h3>14.3 Effects of termination</h3>
+      <p>Upon termination, your right to access the Service ends immediately. You will have a reasonable export window (at least 30 days, except where impractical due to abuse-prevention or legal-compliance reasons) to retrieve your content from the Service. Sections 6 (your content), 7 (AI outputs), 8 (intellectual property), 9 (confidentiality), 11–13 (disclaimers, liability, indemnification), 15 (governing law), and 18 (contact) survive termination.</p>
+    </section>
+
+    <section id="governing-law">
+      <h2 data-num="§ 15">Governing law and disputes</h2>
+
+      <h3>15.1 Governing law</h3>
+      <p>These Terms are governed by the laws of the State of <strong>Delaware</strong>, United States, without regard to conflict-of-law principles. The federal and state courts located in <strong>Wilmington, Delaware</strong> have exclusive jurisdiction over any matter not subject to the arbitration clause below, and you and Alethinx consent to that jurisdiction.</p>
+
+      <h3>15.2 Informal resolution</h3>
+      <p>Before initiating any formal dispute, both parties agree to attempt to resolve the dispute informally by sending written notice to the other party at the contact addresses below. If the dispute is not resolved within 60 days of notice, either party may proceed with arbitration or, where permitted, court proceedings.</p>
+
+      <h3>15.3 Binding arbitration</h3>
+      <p>Except for claims that may be brought in small-claims court and except for claims for injunctive relief related to intellectual property, any dispute arising out of or related to these Terms or the Service will be resolved by binding individual arbitration administered by the <strong>American Arbitration Association (AAA)</strong> under its Commercial Arbitration Rules. The arbitration will be conducted in <strong>Dallas, Texas</strong> or by remote videoconference at the parties' election. The arbitrator's decision will be final and may be enforced in any court of competent jurisdiction.</p>
+
+      <h3>15.4 Class-action waiver</h3>
+      <p style="text-transform:uppercase;font-weight:600;font-size:13px;line-height:1.6;letter-spacing:0.02em;">To the maximum extent permitted by applicable law, you and Alethinx waive any right to bring or participate in any class action, collective action, or representative proceeding. Disputes will be resolved on an individual basis only.</p>
+
+      <h3>15.5 Time limitation</h3>
+      <p>Any claim arising out of or related to these Terms must be filed within one (1) year of the event giving rise to the claim, or be permanently barred, except where prohibited by applicable law.</p>
+    </section>
+
+    <section id="changes">
+      <h2 data-num="§ 16">Changes to these Terms</h2>
+      <p>We may update these Terms from time to time. The "Last updated" date at the top of this page reflects when the Terms were last revised. If we make material changes, we will notify active customers by email or in-product notice at least <strong>30 days</strong> before the changes take effect. Your continued use of the Service after the effective date constitutes acceptance of the updated Terms.</p>
+      <p>If you do not agree to the updated Terms, you must stop using the Service before the effective date. We will provide a reasonable export window for your content.</p>
+      <p>Historical versions of these Terms are available on request to <a href="mailto:legal@alethinx.ai">legal@alethinx.ai</a>.</p>
+    </section>
+
+    <section id="miscellaneous">
+      <h2 data-num="§ 17">Miscellaneous</h2>
+
+      <h3>17.1 Entire agreement</h3>
+      <p>These Terms, together with our <a href="https://trust.alethinx.ai/privacy">Privacy Policy</a> and any order form or written agreement signed by both parties, constitute the entire agreement between you and Alethinx regarding the Service, and supersede all prior or contemporaneous understandings.</p>
+
+      <h3>17.2 Severability</h3>
+      <p>If any provision of these Terms is held unenforceable, the remaining provisions remain in full force and effect, and the unenforceable provision will be modified to the minimum extent necessary to make it enforceable while preserving its intent.</p>
+
+      <h3>17.3 No waiver</h3>
+      <p>Failure or delay by either party to enforce any right under these Terms is not a waiver of that right.</p>
+
+      <h3>17.4 Assignment</h3>
+      <p>You may not assign these Terms, by operation of law or otherwise, without Alethinx's prior written consent. Alethinx may assign these Terms in connection with a merger, acquisition, reorganization, financing, or sale of all or substantially all of its assets, with notice to you.</p>
+
+      <h3>17.5 Force majeure</h3>
+      <p>Neither party is liable for failure or delay in performance caused by events beyond reasonable control, including natural disaster, war, terrorism, civil unrest, labor disturbance, governmental action, internet or telecommunications failure, or actions of third-party service providers.</p>
+
+      <h3>17.6 Independent contractors</h3>
+      <p>The parties are independent contractors. These Terms do not create a partnership, joint venture, agency, fiduciary, or employment relationship.</p>
+
+      <h3>17.7 Notices</h3>
+      <p>Notices to Alethinx must be sent to <a href="mailto:legal@alethinx.ai">legal@alethinx.ai</a>. Notices to you may be sent to the email address associated with your account or posted in-product.</p>
+
+      <h3>17.8 Headings</h3>
+      <p>Section headings are for reference only and do not affect interpretation.</p>
+
+      <h3>17.9 Export and sanctions compliance</h3>
+      <p>You represent that you are not located in, and will not use the Service from, any country subject to comprehensive US sanctions, and that you are not a person designated on any US sanctions list. The Service may be subject to US export-control laws; you agree to comply with all applicable laws.</p>
+    </section>
+
+    <section id="contact" class="contact-card">
+      <h2 data-num="§ 18">Contact</h2>
+      <p>For any question, concern, or notice related to these Terms:</p>
+      <p>
+        <strong>Legal:</strong> <a href="mailto:legal@alethinx.ai">legal@alethinx.ai</a><br>
+        <strong>Billing:</strong> <a href="mailto:billing@alethinx.ai">billing@alethinx.ai</a><br>
+        <strong>Security:</strong> <a href="mailto:security@alethinx.ai">security@alethinx.ai</a><br>
+        <strong>Privacy:</strong> <a href="mailto:privacy@alethinx.ai">privacy@alethinx.ai</a><br>
+        <strong>General:</strong> <a href="mailto:mark@alethinx.ai">mark@alethinx.ai</a><br>
+        <strong>Entity:</strong> Alethinx, Inc.<br>
+        <strong>Jurisdiction:</strong> Delaware C-Corporation<br>
+        <strong>Location:</strong> McKinney, Texas, United States
+      </p>
+      <p>We aim to respond to all legal and contractual inquiries within 5 business days.</p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div>
+      <a href="https://trust.alethinx.ai/">Trust Center</a>
+      <a href="https://trust.alethinx.ai/privacy">Privacy</a>
+      <a href="https://trust.alethinx.ai/terms">Terms</a>
+      <a href="https://www.alethinx.ai/">Alethinx</a>
+    </div>
+    <div class="footer-copy">© 2026 ALETHINX, INC. ALL RIGHTS RESERVED. PROPRIETARY AND CONFIDENTIAL.</div>
+  </footer>
+
+</body>
+</html>
